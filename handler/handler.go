@@ -81,13 +81,13 @@ func parseHook(secret []byte, req *http.Request) (*HookContext, error) {
 
 // RedeployStaging calls the bash script for deploying staging
 func RedeployStaging() {
-	cmd := exec.Command("/bin/sh", "deploy-staging.sh")
+	cmd := exec.Command("/bin/sh", "scripts/deploy-staging.sh")
 	fmt.Println(cmd.Output())
 }
 
 // RedeployProduction calls the bash script for deploying production
 func RedeployProduction() {
-	cmd := exec.Command("/bin/sh", "deploy-production.sh")
+	cmd := exec.Command("/bin/sh", "scripts/deploy-production.sh")
 	fmt.Println(cmd.Output())
 }
 
